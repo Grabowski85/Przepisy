@@ -1,0 +1,38 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block content
+body    
+<main>
+h1  Dodawanie nowego przepisu
+<br>
+  a#Home-btn(href='../') Strona Główna
+  <br>
+  <br>
+  <br>
+  
+form(action="/recipe/new", method="post")
+
+    label(for="title") Nazwa przepisu: 
+    input.form-control(type="text", placeholder="Wprowadź nazwe przepisu", name="title")
+    br
+
+    label(for="type") Wybierz typ jedzenia:
+    select.form-control(name=type)
+        option(value="") Wybierz typ jedzenia 
+        option(value="Appetizer") Przystawki  
+        option(value="Main dish") Dania główne 
+        option(value="Dessert") Desery 
+        option(value="others") Inne 
+    br
+    label(for="ingredients") Składniki: 
+    textarea.form-control(name="ingredients", cols="30", rows="10") 
+    br
+    label(for="procedure") Kolejność przyrządzania: 
+    textarea.form-control(name="procedure", cols="30", rows="10") 
+    br
+    button#add-btn(type="submit" ) Dodaj przepis
+</main>
+</body>
+</html>

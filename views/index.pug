@@ -1,0 +1,19 @@
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    block content
+    
+  h1 Przepisy
+  p Witaj na stronie z przepisami.
+
+  a#add-recipe-btn(href='/recipe/new') Dodaj przepis
+
+form(action="/query", method="get")
+  input#search-bar(type="text", placeholder="Szukaj przepisu", name="search")
+  button#search-btn(type="submit") Szukaj
+
+
+  
+  
+  
